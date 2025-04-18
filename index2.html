@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <link rel="stylesheet" href="styles1and2.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .details-sec-start {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 95%;
+            border: 1px solid #DEE2E7;
+            border-radius: 6px;
+            margin: 1rem auto;
+            gap: 20px;
+        }
+
+        /* Sidebar (Left Side) */
+        .sidebar {
+            width: 25%;
+            min-width: 250px;
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Products Section (Right Side) */
+        .products {
+            width: 75%;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* Individual Product Cards */
+        .product-card {
+            height: 310px;
+            border: 1px solid #ddd;
+            border: 1px solid #DEE2E7;
+            border-radius: 6px;
+            text-align: center;
+            overflow: hidden;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            /* Ensures vertical stacking */
+        }
+
+        /* Product Image */
+        .product-card img {
+            width: 100%;
+            height: 60%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Product Info */
+        .product-info {
+            padding: 10px;
+        }
+
+        /* Price Container (Price on Left, Like on Right) */
+        .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Price Styling */
+        .price {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        /* Like Icon */
+        .like-icon {
+            color: red;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Rating Stars */
+        .rating {
+            font-size: 20px;
+            color: gold;
+            margin: 5px 0;
+        }
+
+        /* Product Description */
+        .description {
+            font-size: 14px;
+            text-align: left;
+            /* Left align the paragraph */
+            color: #555;
+        }
+
+
+        .sidebar {
+            background: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-nav">
+        <nav style="background: #222; padding: 12px;">
+          <ul style="display: flex; justify-content: center; gap: 40px; list-style: none; margin: 0; padding: 0;">
+            <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+            <li><a href="index1.html" style="color: white; text-decoration: none;">Products</a></li>
+            <li><a href="index4.html" style="color: white; text-decoration: none;">Carts</a></li>
+            <li><a href="index2.html" style="color: white; text-decoration: none;">About</a></li>
+            <li><a href="index3.html" style="color: white; text-decoration: none;">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+    <!-- Header Section Start  -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="logoName">Brand</span>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <div class="vertical-line"></div>
+            <select class="searching">
+                <option>All category</option>
+                <option>Electronics</option>
+                <option>Clothing</option>
+                <option>Home & Kitchen</option>
+            </select>
+            <button>Search</button>
+        </div>
+
+        <div class="icons">
+            <div class="icon">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </div>
+            <div class="icon">
+                <i class="fas fa-comment"></i>
+                <span>Message</span>
+            </div>
+            <div class="icon">
+                <i class="fas fa-heart"></i>
+                <span>Orders</span>
+            </div>
+            <div class="icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span>My cart</span>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End  -->
+
+    <!-- Navbar Section Start -->
+    <nav class="main-navbar">
+        <ul class="nav-left">
+            <li><span class="menu-icon">☰&nbsp;</span> All Category</li>
+            <li>Hot Offers</li>
+            <li>Gift Boxes</li>
+            <li>Projects</li>
+            <li>Menu Item</li>
+            <li>Help <i class="fas fa-chevron-down"></i></li>
+        </ul>
+        <ul class="nav-right">
+            <li>English, USD <i class="fas fa-chevron-down"></i></li>
+            <li>Ship to <img src="/images/images_main/h_flag.png" alt="Germany" class="flag">&nbsp;<i
+                    class="fas fa-chevron-down"></i></li>
+        </ul>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Clothings</a></li>
+        <li><a href="#">Men’s wear</a></li>
+        <li><a href="#">Summer clothing</a></li>
+    </ul>
+
+
+
+
+
+    <!-- Details section start -->
+    <div class="details-sec-start">
+
+        <div class="sidebar">
+            <div class="arrows-style">
+                <h3 style="margin-right: 11rem;">Category</h3><i class="fas fa-chevron-down arrow-icon-style"></i>
+            </div><br>
+            <ul>
+                <li style="background: none;padding: 3px;">Mobile accessory</li>
+                <li style="background: none;padding: 3px;">Electronics</li>
+                <li style="background: none;padding: 3px;">Smartphones</li>
+                <li style="background: none;padding: 3px;">Modern tech</li>
+            </ul>
+            <a href="#" style="color:#0D6EFD ;">See all</a><br><br>
+            <hr><br>
+
+            <!-- -------------------------------------------- -->
+
+            <div class="arrows-style">
+                <h3 style="margin-right: 12rem;">Brands</h3><i class="fas fa-chevron-down arrow-icon-style"></i>
+            </div><br>
+            <ul>
+                <li style="background: none;"><input type="checkbox" id="samsung">&nbsp;&nbsp;&nbsp;<label
+                        for="samsung">Samsung</label></li>
+                <li style="background: none;"><input type="checkbox" id="apple">&nbsp;&nbsp;&nbsp;<label
+                        for="apple">Apple</label></li>
+                <li style="background: none;"><input type="checkbox" id="huawei">&nbsp;&nbsp;&nbsp;<label
+                        for="huawei">Huawei</label></li>
+                <li style="background: none;"><input type="checkbox" id="poco">&nbsp;&nbsp;&nbsp;<label
+                        for="poco">Poco</label></li>
+                <li style="background: none;"><input type="checkbox" id="lenovo">&nbsp;&nbsp;&nbsp;<label
+                        for="lenovo">Lenovo</label></li>
+            </ul>
+
+            <a href="#" style="color:#0D6EFD ;">See all</a><br><br>
+            <hr><br>
+            <!-- -------------------------------------------- -->
+
+            <div class="arrows-style">
+                <h3 style="margin-right: 11rem;">Features</h3><i class="fas fa-chevron-down arrow-icon-style"></i>
+            </div><br>
+            <ul>
+                <li style="background: none;"><input type="checkbox" id="samsung">&nbsp;&nbsp;&nbsp;<label
+                        for="samsung">Metallic</label></li>
+                <li style="background: none;"><input type="checkbox" id="apple">&nbsp;&nbsp;&nbsp;<label
+                        for="apple">Plastic
+                        cover</label></li>
+                <li style="background: none;"><input type="checkbox" id="huawei">&nbsp;&nbsp;&nbsp;<label
+                        for="huawei">8GB
+                        RAM</label></li>
+                <li style="background: none;"><input type="checkbox" id="poco">&nbsp;&nbsp;&nbsp;<label for="poco">Super
+                        power</label></li>
+                <li style="background: none;"><input type="checkbox" id="lenovo">&nbsp;&nbsp;&nbsp;<label
+                        for="lenovo">Large
+                        Memory</label></li>
+            </ul>
+
+            <a href="#" style="color:#0D6EFD ;">See all</a><br><br>
+            <hr><br>
+            <!-- --------------------------------- -->
+            <div class="arrows-style">
+                <h3 style="margin-right: 10rem;">Price Range</h3><i class="fas fa-chevron-down arrow-icon-style"></i>
+
+            </div><br><br>
+            <hr><br>
+
+            <!-- -------------------------------- -->
+            <div class="arrows-style">
+                <h3 style="margin-right: 11rem;">Condition</h3><i class="fas fa-chevron-down arrow-icon-style"></i>
+            </div><br>
+            <hr><br>
+            <!-- ----------------------------------------------- -->
+            <div class="arrows-style">
+                <h3 style="margin-right: 12rem;">Ratings</h3><i class="fas fa-chevron-down arrow-icon-style"></i>
+            </div><br>
+
+
+
+            <!-- -------------------------------------------- -->
+
+        </div>
+
+
+        <!-- Right section of products -->
+
+        <div class="products">
+            <div class="items-header">
+                <p><strong>12,911</strong> items in <strong>Mobile accessory</strong></p>
+
+                <div class="filters">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span> Verified only
+                    </label>
+
+                    <select>
+                        <option selected>Featured</option>
+                        <option>Newest</option>
+                        <option>Best Selling</option>
+                    </select>
+
+                    <div class="view-toggle">
+                        <button class="grid-view active">▦</button>
+                        <button class="list-view">≡</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- right section here start -->
+            <div class="product-grid">
+
+                <div class="product-card">
+                    <img src="/images/images2/1.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$99.50 <span class="old-price">$1128.00</span></p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★★☆ 4.0</div>
+                        <p class="description">Iphone Red Color</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/images2/2.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$99.50 <span class="old-price">$1128.00</span></p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★★★ 5.0</div>
+                        <p class="description">Iphone Blue Color</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/images2/3.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$998.00</p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★☆☆ 3.0</div>
+                        <p class="description">Smartphone</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/images2/4.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$99.50 <span class="old-price">$1128.00</span></p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★★☆ 4.0</div>
+                        <p class="description">Ipad</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/images2/5.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$99.50 <span class="old-price">$1128.00</span></p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★★★ 5.0</div>
+                        <p class="description">HERO6 4K Action Camera - Black</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/images2/6.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$998.00</p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★★★ 5.0</div>
+                        <p class="description">GoPro HERO6 4K Action Camera - Black</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/images2/7.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$99.50 <span class="old-price">$1128.00</span></p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★★☆ 4.0</div>
+                        <p class="description">Laptop</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="/images/images2/8.png" alt="Product Image">
+                    <div class="product-info">
+                        <div class="price-container">
+                            <p class="price">$99.50 <span class="old-price">$1128.00</span></p>
+                            <i class="fas fa-heart like-icon"></i>
+                        </div>
+                        <div class="rating">★★★★★ 5.0</div>
+                        <p class="description">Smart Watch</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pagination -->
+
+            <div class="pagination-container">
+                <label for="itemsPerPage">Show</label>
+                <select id="itemsPerPage">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+                <ul class="pagination">
+                    <li class="prev"><img src="/images/images1/icon1.png" alt="" srcset=""></li>
+                    <li class="page active">1</li>
+                    <li class="page">2</li>
+                    <li class="page">3</li>
+                    <li class="next"><img src="/images/images1/icon2.png" style="transform: rotate(180deg);" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- -------------------------- -->
+
+        </div>
+
+    </div>
+    <!-- details section ending -->
+
+
+
+
+
+
+
+
+    <!-- Footer  and subscription Section Start -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2>Subscribe on our newsletter</h2>
+            <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+            <div class="newsletter-form">
+                <div class="input-group">
+                    <i class="far fa-envelope"></i>&nbsp;&nbsp;
+                    <input type="email" placeholder="Email">
+                </div>
+                <button class="subscribe-btn">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- Brand & Info -->
+            <div class="footer-brand">
+                <h2><i class="fas fa-shopping-bag"></i>&nbsp; Brand</h2>
+                <p>Best information about the company goes here but now lorem ipsum is</p>
+                <div class="social-icons">
+                    <i class="icons-style fab fa-facebook"></i>
+                    <i class="icons-style fab fa-twitter"></i>
+                    <i class="icons-style fab fa-linkedin"></i>
+                    <i class="icons-style fab fa-youtube"></i>
+                    <i class="icons-style fab fa-instagram"></i>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Partnership</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Find store</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Money Refund</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For users</h3>
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">My Orders</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Get App Section -->
+            <div class="footer-app">
+                <h3>Get app</h3>
+                <img src="/images/images_main/appstore.png" alt="App Store">
+                <img src="/images/images_main/googlePlay.png" alt="Google Play">
+            </div>
+        </div>
+
+
+
+    </footer>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>© 2023 Ecommerce.</p>
+        <div class="footer-language">
+            <img src="/images/images_main/h_flag.png" alt="Flag">
+            <span>English</span> &nbsp;<i class="fas fa-chevron-up"></i>
+        </div>
+    </div>
+    <!-- Footer Section End -->
+
+
+    <script>
+        // pagination
+        document.querySelectorAll('.pagination .page').forEach(page => {
+            page.addEventListener('click', function () {
+                document.querySelectorAll('.pagination .page').forEach(p => p.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
